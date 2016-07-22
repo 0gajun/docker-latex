@@ -7,9 +7,10 @@ then
   MOUNT_DIR=$PWD
 elif [ $# -eq 2 ]
 then
-  pushd $2 > /dev/null
+  TMP_DIR=`pwd`
+  cd $2
   MOUNT_DIR=`pwd`
-  popd > /dev/null
+  cd $TMP_DIR
 else
   echo 'invalid argument'
   echo 'usage:'
