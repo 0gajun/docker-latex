@@ -21,3 +21,6 @@ This repository has example latex file in tex\_src.
 ./latex_build.sh example ./tex_src
 ```
 Built pdf will be placed in `./tex_src`
+
+## Requirements
+You should have `latexmkrc` in target directory.
