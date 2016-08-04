@@ -8,8 +8,14 @@ RUN set -x && \
       apt-add-repository -y ppa:texlive-backports/ppa && \
       apt -y install texlive-lang-cjk latexmk && \
       wget http://mirrors.ctan.org/macros/latex/contrib/docmute.zip && \
+      wget http://mirrors.ctan.org/macros/latex/contrib/listings.zip && \
       unzip docmute.zip && \
+      unzip listings.zip && \
       mv docmute /usr/share/texmf/tex/latex/ && \
+      mv listings /usr/share/texmf/tex/latex/ && \
+      cd /usr/share/texmf/tex/latex/listings && \
+      platex *.ins && \
+      cd - && \
       mktexlsr && \
       kanji-config-updmap-sys auto
 
