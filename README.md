@@ -1,7 +1,7 @@
 # Docker image for building latex
 Run latexmk in a docker container for building latex.
 
-[![CircleCI](https://circleci.com/gh/Oga-Jun/docker-latex/tree/master.svg?style=svg&circle-token=ae10f69566493df21ccb2c5d2f517fb690118a76)](https://circleci.com/gh/Oga-Jun/docker-latex/tree/master)
+[![CircleCI](https://circleci.com/gh/0gajun/docker-latex/tree/master.svg?style=svg&circle-token=ae10f69566493df21ccb2c5d2f517fb690118a76)](https://circleci.com/gh/0gajun/docker-latex/tree/master)
 
 [![Docker Stars](https://img.shields.io/docker/stars/ogajun/latex.svg?maxAge=2592000)](https://hub.docker.com/r/ogajun/latex/)
 
