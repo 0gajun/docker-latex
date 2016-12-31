@@ -11,12 +11,15 @@ RUN set -x && \
       wget http://mirrors.ctan.org/macros/latex/contrib/listings.zip && \
       unzip docmute.zip && \
       unzip listings.zip && \
+      rm docmute.zip listings.zip && \
       mv docmute /usr/share/texmf/tex/latex/ && \
       mv listings /usr/share/texmf/tex/latex/ && \
       cd /usr/share/texmf/tex/latex/listings && \
       platex *.ins && \
       cd - && \
       mktexlsr && \
+      apt autoremove && \
+      apt clean && \
       kanji-config-updmap-sys auto
 
 WORKDIR /data
