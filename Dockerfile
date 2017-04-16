@@ -9,11 +9,16 @@ RUN set -x && \
       apt -y install texlive-lang-cjk latexmk && \
       wget http://mirrors.ctan.org/macros/latex/contrib/docmute.zip && \
       wget http://mirrors.ctan.org/macros/latex/contrib/listings.zip && \
+      wget http://mirrors.ctan.org/macros/latex/contrib/xkeyval.zip && \
       unzip docmute.zip && \
       unzip listings.zip && \
-      rm docmute.zip listings.zip && \
+      unzip xkeyval.zip && \
+      rm docmute.zip listings.zip xkeyval.zip && \
       mv docmute /usr/share/texmf/tex/latex/ && \
       mv listings /usr/share/texmf/tex/latex/ && \
+      mv xkeyval /usr/share/texmf/tex/latex/ && \
+      cd /usr/share/texmf/tex/latex/xkeyval && \
+      latex xkeyval.dtx && \
       cd /usr/share/texmf/tex/latex/listings && \
       platex *.ins && \
       cd - && \
